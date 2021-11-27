@@ -1,0 +1,27 @@
+.front {
+  transform: translateZ(-100px) rotateY(  0deg) translateZ(100px);
+  background: gray;
+}
+
+.left {
+  transform: translateZ(-100px) rotateY(-90deg) translateZ(100px); 
+  background: black;
+}
+
+.right {
+  transform: translateZ(-100px) rotateY( 90deg) translateZ(100px);
+  background: white;
+}
+
+.left,.front,.right {
+  position:absolute; top:0;bottom:0;left:0;right:0;
+
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out, background-color 0.6s ease-in-out;
+}
+
+.container {
+  position:relative; width:100px; height:100px;
+
+  perspective: 1000;
+}
